@@ -2,8 +2,6 @@ package tur.patryk;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.time.LocalDate;
-
 public class Hydro {
 
     @JsonProperty("id_stacji")
@@ -13,21 +11,21 @@ public class Hydro {
     @JsonProperty("województwo")
     private String wojewodztwo;
     @JsonProperty("stan_wody")
-    private Integer stanWody;
+    private String stanWody;
     @JsonProperty("stan_wody_data_pomiaru")
-    private LocalDate stanWodyDataPomiaru;
+    private String stanWodyDataPomiaru;
     @JsonProperty("temperatura_wody")
-    private Double temperaturaWody;
+    private String temperaturaWody;
     @JsonProperty("temperatura_wody_data_pomiaru")
-    private LocalDate temperaturaWodyDataPomiaru;
+    private String temperaturaWodyDataPomiaru;
     @JsonProperty("zjawisko_lodowe")
-    private Integer zjawiskoLodowe;
+    private String zjawiskoLodowe;
     @JsonProperty("zjawisko_lodowe_data_pomiaru")
-    private LocalDate zjawiskoLodoweDataPomiaru;
+    private String zjawiskoLodoweDataPomiaru;
     @JsonProperty("zjawisko_zarastania")
-    private Integer zjawiskoZarastania;
+    private String zjawiskoZarastania;
     @JsonProperty("zjawisko_zarastania_data_pomiaru")
-    private LocalDate zjawiskoZarastaniaDataPomiaru;
+    private String zjawiskoZarastaniaDataPomiaru;
 
     public Integer getIdStacji() {
         return idStacji;
@@ -61,67 +59,67 @@ public class Hydro {
         this.wojewodztwo = wojewodztwo;
     }
 
-    public Integer getStanWody() {
+    public String getStanWody() {
         return stanWody;
     }
 
-    public void setStanWody(Integer stanWody) {
+    public void setStanWody(String stanWody) {
         this.stanWody = stanWody;
     }
 
-    public LocalDate getStanWodyDataPomiaru() {
+    public String getStanWodyDataPomiaru() {
         return stanWodyDataPomiaru;
     }
 
-    public void setStanWodyDataPomiaru(LocalDate stanWodyDataPomiaru) {
+    public void setStanWodyDataPomiaru(String stanWodyDataPomiaru) {
         this.stanWodyDataPomiaru = stanWodyDataPomiaru;
     }
 
-    public Double getTemperaturaWody() {
+    public String getTemperaturaWody() {
         return temperaturaWody;
     }
 
-    public void setTemperaturaWody(Double temperaturaWody) {
+    public void setTemperaturaWody(String temperaturaWody) {
         this.temperaturaWody = temperaturaWody;
     }
 
-    public LocalDate getTemperaturaWodyDataPomiaru() {
+    public String getTemperaturaWodyDataPomiaru() {
         return temperaturaWodyDataPomiaru;
     }
 
-    public void setTemperaturaWodyDataPomiaru(LocalDate temperaturaWodyDataPomiaru) {
+    public void setTemperaturaWodyDataPomiaru(String temperaturaWodyDataPomiaru) {
         this.temperaturaWodyDataPomiaru = temperaturaWodyDataPomiaru;
     }
 
-    public Integer getZjawiskoLodowe() {
+    public String getZjawiskoLodowe() {
         return zjawiskoLodowe;
     }
 
-    public void setZjawiskoLodowe(Integer zjawiskoLodowe) {
+    public void setZjawiskoLodowe(String zjawiskoLodowe) {
         this.zjawiskoLodowe = zjawiskoLodowe;
     }
 
-    public LocalDate getZjawiskoLodoweDataPomiaru() {
+    public String getZjawiskoLodoweDataPomiaru() {
         return zjawiskoLodoweDataPomiaru;
     }
 
-    public void setZjawiskoLodoweDataPomiaru(LocalDate zjawiskoLodoweDataPomiaru) {
+    public void setZjawiskoLodoweDataPomiaru(String zjawiskoLodoweDataPomiaru) {
         this.zjawiskoLodoweDataPomiaru = zjawiskoLodoweDataPomiaru;
     }
 
-    public Integer getZjawiskoZarastania() {
+    public String getZjawiskoZarastania() {
         return zjawiskoZarastania;
     }
 
-    public void setZjawiskoZarastania(Integer zjawiskoZarastania) {
+    public void setZjawiskoZarastania(String zjawiskoZarastania) {
         this.zjawiskoZarastania = zjawiskoZarastania;
     }
 
-    public LocalDate getZjawiskoZarastaniaDataPomiaru() {
+    public String getZjawiskoZarastaniaDataPomiaru() {
         return zjawiskoZarastaniaDataPomiaru;
     }
 
-    public void setZjawiskoZarastaniaDataPomiaru(LocalDate zjawiskoZarastaniaDataPomiaru) {
+    public void setZjawiskoZarastaniaDataPomiaru(String zjawiskoZarastaniaDataPomiaru) {
         this.zjawiskoZarastaniaDataPomiaru = zjawiskoZarastaniaDataPomiaru;
     }
 
