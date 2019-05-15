@@ -37,15 +37,14 @@ public class SaveDataHydro {
         preparedStatement.setString(2, hydro.getStacja());
         preparedStatement.setString(3, hydro.getRzeka());
         preparedStatement.setString(4, hydro.getWojewodztwo());
-        preparedStatement.setInt(5, hydro.getStanWody());
-        preparedStatement.setDate(6, hydro.getStanWodyDataPomiaru());
-        //preparedStatement.setDate(6, Date.valueOf(hydro.getStanWodyDataPomiaru()));
-        preparedStatement.setDouble(7, hydro.getTemperaturaWody());
-        preparedStatement.setDate(8, hydro.getTemperaturaWodyDataPomiaru());
-        preparedStatement.setInt(9, hydro.getZjawiskoLodowe());
-        preparedStatement.setDate(10, hydro.getZjawiskoLodoweDataPomiaru());
-        preparedStatement.setInt(11, hydro.getZjawiskoZarastania());
-        preparedStatement.setDate(12, hydro.getZjawiskoZarastaniaDataPomiaru());
+        preparedStatement.setString(5, hydro.getStanWody());
+        preparedStatement.setString(6, hydro.getStanWodyDataPomiaru());
+        preparedStatement.setString(7, hydro.getTemperaturaWody());
+        preparedStatement.setString(8, hydro.getTemperaturaWodyDataPomiaru());
+        preparedStatement.setString(9, hydro.getZjawiskoLodowe());
+        preparedStatement.setString(10, hydro.getZjawiskoLodoweDataPomiaru());
+        preparedStatement.setString(11, hydro.getZjawiskoZarastania());
+        preparedStatement.setString(12, hydro.getZjawiskoZarastaniaDataPomiaru());
 
         preparedStatement.execute();
     }
