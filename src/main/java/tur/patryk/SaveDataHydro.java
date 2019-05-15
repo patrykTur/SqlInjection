@@ -25,20 +25,24 @@ public class SaveDataHydro {
         System.out.println("Done");
     }
 
-    private static void addToDataBase(Hydro hydro, Connection connection) throws SQLException {
+    private static void addToDataBase (Hydro hydro, Connection connection) throws SQLException {
 
         String sqlQuery = "insert into hydro (id_stacji, stacja, rzeka, województwo, stan_wody, stan_wody_data_pomiaru, " +
-                "temperatura_wody, temperatura_wody_data_pomiaru, zjawisko_lodowe, zjawisko_lodowe_data_pomiaru, " +
-                "zjawisko_zarastania, zjawisko_zarastania_data_pomiaru) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        "temperatura_wody, temperatura_wody_data_pomiaru, zjawisko_lodowe, zjawisko_lodowe_data_pomiaru, " +
+        "zjawisko_zarastania, zjawisko_zarastania_data_pomiaru) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> add original project files
         preparedStatement.setInt(1, hydro.getIdStacji());
         preparedStatement.setString(2, hydro.getStacja());
         preparedStatement.setString(3, hydro.getRzeka());
         preparedStatement.setString(4, hydro.getWojewodztwo());
+<<<<<<< HEAD
         preparedStatement.setString(5, hydro.getStanWody());
         preparedStatement.setString(6, hydro.getStanWodyDataPomiaru());
         preparedStatement.setString(7, hydro.getTemperaturaWody());
@@ -76,6 +80,17 @@ public class SaveDataHydro {
         CheckNull.intOrNull(preparedStatement, 11, hydro.getZjawiskoZarastania());
         CheckNull.dateOrNull(preparedStatement, 12, hydro.getZjawiskoZarastaniaDataPomiaru());
 >>>>>>> Add DateConverter and CheckNull class
+=======
+        preparedStatement.setInt(5, hydro.getStanWody());
+        preparedStatement.setDate(6, hydro.getStanWodyDataPomiaru());
+        //preparedStatement.setDate(6, Date.valueOf(hydro.getStanWodyDataPomiaru()));
+        preparedStatement.setDouble(7, hydro.getTemperaturaWody());
+        preparedStatement.setDate(8, hydro.getTemperaturaWodyDataPomiaru());
+        preparedStatement.setInt(9, hydro.getZjawiskoLodowe());
+        preparedStatement.setDate(10, hydro.getZjawiskoLodoweDataPomiaru());
+        preparedStatement.setInt(11, hydro.getZjawiskoZarastania());
+        preparedStatement.setDate(12, hydro.getZjawiskoZarastaniaDataPomiaru());
+>>>>>>> add original project files
 
         preparedStatement.execute();
     }
