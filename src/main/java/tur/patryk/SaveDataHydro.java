@@ -25,26 +25,13 @@ public class SaveDataHydro {
         System.out.println("Done");
     }
 
-    private static void addToDataBase (Hydro hydro, Connection connection) throws SQLException {
+    private static void addToDataBase(Hydro hydro, Connection connection) throws SQLException {
 
         String sqlQuery = "insert into hydro (id_stacji, stacja, rzeka, województwo, stan_wody, stan_wody_data_pomiaru, " +
-        "temperatura_wody, temperatura_wody_data_pomiaru, zjawisko_lodowe, zjawisko_lodowe_data_pomiaru, " +
-        "zjawisko_zarastania, zjawisko_zarastania_data_pomiaru) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                "temperatura_wody, temperatura_wody_data_pomiaru, zjawisko_lodowe, zjawisko_lodowe_data_pomiaru, " +
+                "zjawisko_zarastania, zjawisko_zarastania_data_pomiaru) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
-
-//        preparedStatement.setInt(1, hydro.getIdStacji());
-//        preparedStatement.setString(2, hydro.getStacja());
-//        preparedStatement.setString(3, hydro.getRzeka());
-//        preparedStatement.setString(4, hydro.getWojewodztwo());
-//        preparedStatement.setInt(5, hydro.getStanWody());
-//        preparedStatement.setDate(6, DateConverter.localDateTime2SqlDate(hydro.getStanWodyDataPomiaru()));
-//        preparedStatement.setDouble(7, hydro.getTemperaturaWody());
-//        preparedStatement.setDate(8, DateConverter.localDateTime2SqlDate(hydro.getTemperaturaWodyDataPomiaru()));
-//        preparedStatement.setInt(9, hydro.getZjawiskoLodowe());
-//        preparedStatement.setDate(10, DateConverter.localDateTime2SqlDate(hydro.getZjawiskoLodoweDataPomiaru()));
-//        preparedStatement.setInt(11, hydro.getZjawiskoZarastania());
-//        preparedStatement.setDate(12, DateConverter.localDateTime2SqlDate(hydro.getZjawiskoZarastaniaDataPomiaru()));
 
         CheckNull.intOrNull(preparedStatement, 1, hydro.getIdStacji());
         CheckNull.stringOrNull(preparedStatement, 2, hydro.getStacja());
