@@ -25,14 +25,15 @@ public class SaveDataHydro {
         System.out.println("Done");
     }
 
-    private static void addToDataBase (Hydro hydro, Connection connection) throws SQLException {
+    private static void addToDataBase(Hydro hydro, Connection connection) throws SQLException {
 
         String sqlQuery = "insert into hydro (id_stacji, stacja, rzeka, województwo, stan_wody, stan_wody_data_pomiaru, " +
-        "temperatura_wody, temperatura_wody_data_pomiaru, zjawisko_lodowe, zjawisko_lodowe_data_pomiaru, " +
-        "zjawisko_zarastania, zjawisko_zarastania_data_pomiaru) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                "temperatura_wody, temperatura_wody_data_pomiaru, zjawisko_lodowe, zjawisko_lodowe_data_pomiaru, " +
+                "zjawisko_zarastania, zjawisko_zarastania_data_pomiaru) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         preparedStatement.setInt(1, hydro.getIdStacji());
         preparedStatement.setString(2, hydro.getStacja());
@@ -60,6 +61,8 @@ public class SaveDataHydro {
 //        preparedStatement.setInt(11, hydro.getZjawiskoZarastania());
 //        preparedStatement.setDate(12, DateConverter.localDateTime2SqlDate(hydro.getZjawiskoZarastaniaDataPomiaru()));
 
+=======
+>>>>>>> update
         CheckNull.intOrNull(preparedStatement, 1, hydro.getIdStacji());
         CheckNull.stringOrNull(preparedStatement, 2, hydro.getStacja());
         CheckNull.stringOrNull(preparedStatement, 3, hydro.getRzeka());
