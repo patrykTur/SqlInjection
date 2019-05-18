@@ -1,16 +1,26 @@
 package tur.patryk;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+<<<<<<< HEAD
+=======
+import java.time.LocalDateTime;
+
+>>>>>>> Add DateConverter and CheckNull class
 public class Hydro {
 
     @JsonProperty("id_stacji")
     private Integer idStacji;
+
     private String stacja;
     private String rzeka;
+
     @JsonProperty("województwo")
     private String wojewodztwo;
+
     @JsonProperty("stan_wody")
+<<<<<<< HEAD
     private String stanWody;
     @JsonProperty("stan_wody_data_pomiaru")
     private String stanWodyDataPomiaru;
@@ -26,6 +36,34 @@ public class Hydro {
     private String zjawiskoZarastania;
     @JsonProperty("zjawisko_zarastania_data_pomiaru")
     private String zjawiskoZarastaniaDataPomiaru;
+=======
+    private Integer stanWody;
+
+    @JsonProperty("stan_wody_data_pomiaru")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime stanWodyDataPomiaru;
+
+    @JsonProperty("temperatura_wody")
+    private Double temperaturaWody;
+
+    @JsonProperty("temperatura_wody_data_pomiaru")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime temperaturaWodyDataPomiaru;
+
+    @JsonProperty("zjawisko_lodowe")
+    private Integer zjawiskoLodowe;
+
+    @JsonProperty("zjawisko_lodowe_data_pomiaru")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime zjawiskoLodoweDataPomiaru;
+
+    @JsonProperty("zjawisko_zarastania")
+    private Integer zjawiskoZarastania;
+
+    @JsonProperty("zjawisko_zarastania_data_pomiaru")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime zjawiskoZarastaniaDataPomiaru;
+>>>>>>> Add DateConverter and CheckNull class
 
     public Integer getIdStacji() {
         return idStacji;
@@ -67,11 +105,19 @@ public class Hydro {
         this.stanWody = stanWody;
     }
 
+<<<<<<< HEAD
     public String getStanWodyDataPomiaru() {
         return stanWodyDataPomiaru;
     }
 
     public void setStanWodyDataPomiaru(String stanWodyDataPomiaru) {
+=======
+    public LocalDateTime getStanWodyDataPomiaru() {
+        return stanWodyDataPomiaru;
+    }
+
+    public void setStanWodyDataPomiaru(LocalDateTime stanWodyDataPomiaru) {
+>>>>>>> Add DateConverter and CheckNull class
         this.stanWodyDataPomiaru = stanWodyDataPomiaru;
     }
 
@@ -83,11 +129,19 @@ public class Hydro {
         this.temperaturaWody = temperaturaWody;
     }
 
+<<<<<<< HEAD
     public String getTemperaturaWodyDataPomiaru() {
         return temperaturaWodyDataPomiaru;
     }
 
     public void setTemperaturaWodyDataPomiaru(String temperaturaWodyDataPomiaru) {
+=======
+    public LocalDateTime getTemperaturaWodyDataPomiaru() {
+        return temperaturaWodyDataPomiaru;
+    }
+
+    public void setTemperaturaWodyDataPomiaru(LocalDateTime temperaturaWodyDataPomiaru) {
+>>>>>>> Add DateConverter and CheckNull class
         this.temperaturaWodyDataPomiaru = temperaturaWodyDataPomiaru;
     }
 
@@ -99,11 +153,19 @@ public class Hydro {
         this.zjawiskoLodowe = zjawiskoLodowe;
     }
 
+<<<<<<< HEAD
     public String getZjawiskoLodoweDataPomiaru() {
         return zjawiskoLodoweDataPomiaru;
     }
 
     public void setZjawiskoLodoweDataPomiaru(String zjawiskoLodoweDataPomiaru) {
+=======
+    public LocalDateTime getZjawiskoLodoweDataPomiaru() {
+        return zjawiskoLodoweDataPomiaru;
+    }
+
+    public void setZjawiskoLodoweDataPomiaru(LocalDateTime zjawiskoLodoweDataPomiaru) {
+>>>>>>> Add DateConverter and CheckNull class
         this.zjawiskoLodoweDataPomiaru = zjawiskoLodoweDataPomiaru;
     }
 
@@ -115,11 +177,19 @@ public class Hydro {
         this.zjawiskoZarastania = zjawiskoZarastania;
     }
 
+<<<<<<< HEAD
     public String getZjawiskoZarastaniaDataPomiaru() {
         return zjawiskoZarastaniaDataPomiaru;
     }
 
     public void setZjawiskoZarastaniaDataPomiaru(String zjawiskoZarastaniaDataPomiaru) {
+=======
+    public LocalDateTime getZjawiskoZarastaniaDataPomiaru() {
+        return zjawiskoZarastaniaDataPomiaru;
+    }
+
+    public void setZjawiskoZarastaniaDataPomiaru(LocalDateTime zjawiskoZarastaniaDataPomiaru) {
+>>>>>>> Add DateConverter and CheckNull class
         this.zjawiskoZarastaniaDataPomiaru = zjawiskoZarastaniaDataPomiaru;
     }
 

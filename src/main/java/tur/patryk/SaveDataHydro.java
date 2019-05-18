@@ -33,6 +33,7 @@ public class SaveDataHydro {
 
         PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
 
+<<<<<<< HEAD
         preparedStatement.setInt(1, hydro.getIdStacji());
         preparedStatement.setString(2, hydro.getStacja());
         preparedStatement.setString(3, hydro.getRzeka());
@@ -45,6 +46,33 @@ public class SaveDataHydro {
         preparedStatement.setString(10, hydro.getZjawiskoLodoweDataPomiaru());
         preparedStatement.setString(11, hydro.getZjawiskoZarastania());
         preparedStatement.setString(12, hydro.getZjawiskoZarastaniaDataPomiaru());
+=======
+//        preparedStatement.setInt(1, hydro.getIdStacji());
+//        preparedStatement.setString(2, hydro.getStacja());
+//        preparedStatement.setString(3, hydro.getRzeka());
+//        preparedStatement.setString(4, hydro.getWojewodztwo());
+//        preparedStatement.setInt(5, hydro.getStanWody());
+//        preparedStatement.setDate(6, DateConverter.localDateTime2SqlDate(hydro.getStanWodyDataPomiaru()));
+//        preparedStatement.setDouble(7, hydro.getTemperaturaWody());
+//        preparedStatement.setDate(8, DateConverter.localDateTime2SqlDate(hydro.getTemperaturaWodyDataPomiaru()));
+//        preparedStatement.setInt(9, hydro.getZjawiskoLodowe());
+//        preparedStatement.setDate(10, DateConverter.localDateTime2SqlDate(hydro.getZjawiskoLodoweDataPomiaru()));
+//        preparedStatement.setInt(11, hydro.getZjawiskoZarastania());
+//        preparedStatement.setDate(12, DateConverter.localDateTime2SqlDate(hydro.getZjawiskoZarastaniaDataPomiaru()));
+
+        CheckNull.intOrNull(preparedStatement, 1, hydro.getIdStacji());
+        CheckNull.stringOrNull(preparedStatement, 2, hydro.getStacja());
+        CheckNull.stringOrNull(preparedStatement, 3, hydro.getRzeka());
+        CheckNull.stringOrNull(preparedStatement, 4, hydro.getWojewodztwo());
+        CheckNull.intOrNull(preparedStatement, 5, hydro.getStanWody());
+        CheckNull.dateOrNull(preparedStatement, 6, hydro.getStanWodyDataPomiaru());
+        CheckNull.doubleOrNull(preparedStatement, 7, hydro.getTemperaturaWody());
+        CheckNull.dateOrNull(preparedStatement, 8, hydro.getTemperaturaWodyDataPomiaru());
+        CheckNull.intOrNull(preparedStatement, 9, hydro.getZjawiskoLodowe());
+        CheckNull.dateOrNull(preparedStatement, 10, hydro.getZjawiskoLodoweDataPomiaru());
+        CheckNull.intOrNull(preparedStatement, 11, hydro.getZjawiskoZarastania());
+        CheckNull.dateOrNull(preparedStatement, 12, hydro.getZjawiskoZarastaniaDataPomiaru());
+>>>>>>> Add DateConverter and CheckNull class
 
         preparedStatement.execute();
     }
