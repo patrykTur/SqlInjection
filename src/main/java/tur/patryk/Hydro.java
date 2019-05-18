@@ -1,34 +1,48 @@
 package tur.patryk;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.time.LocalDate;
-import java.sql.Date;
+import java.time.LocalDateTime;
 
 public class Hydro {
 
     @JsonProperty("id_stacji")
     private Integer idStacji;
+
     private String stacja;
     private String rzeka;
+
     @JsonProperty("województwo")
     private String wojewodztwo;
+
     @JsonProperty("stan_wody")
     private Integer stanWody;
+
     @JsonProperty("stan_wody_data_pomiaru")
-    private LocalDate stanWodyDataPomiaru;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime stanWodyDataPomiaru;
+
     @JsonProperty("temperatura_wody")
     private Double temperaturaWody;
+
     @JsonProperty("temperatura_wody_data_pomiaru")
-    private LocalDate temperaturaWodyDataPomiaru;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime temperaturaWodyDataPomiaru;
+
     @JsonProperty("zjawisko_lodowe")
     private Integer zjawiskoLodowe;
+
     @JsonProperty("zjawisko_lodowe_data_pomiaru")
-    private LocalDate zjawiskoLodoweDataPomiaru;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime zjawiskoLodoweDataPomiaru;
+
     @JsonProperty("zjawisko_zarastania")
     private Integer zjawiskoZarastania;
+
     @JsonProperty("zjawisko_zarastania_data_pomiaru")
-    private LocalDate zjawiskoZarastaniaDataPomiaru;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime zjawiskoZarastaniaDataPomiaru;
 
     public Integer getIdStacji() {
         return idStacji;
@@ -70,11 +84,11 @@ public class Hydro {
         this.stanWody = stanWody;
     }
 
-    public LocalDate getStanWodyDataPomiaru() {
+    public LocalDateTime getStanWodyDataPomiaru() {
         return stanWodyDataPomiaru;
     }
 
-    public void setStanWodyDataPomiaru(LocalDate stanWodyDataPomiaru) {
+    public void setStanWodyDataPomiaru(LocalDateTime stanWodyDataPomiaru) {
         this.stanWodyDataPomiaru = stanWodyDataPomiaru;
     }
 
@@ -86,11 +100,11 @@ public class Hydro {
         this.temperaturaWody = temperaturaWody;
     }
 
-    public LocalDate getTemperaturaWodyDataPomiaru() {
+    public LocalDateTime getTemperaturaWodyDataPomiaru() {
         return temperaturaWodyDataPomiaru;
     }
 
-    public void setTemperaturaWodyDataPomiaru(LocalDate temperaturaWodyDataPomiaru) {
+    public void setTemperaturaWodyDataPomiaru(LocalDateTime temperaturaWodyDataPomiaru) {
         this.temperaturaWodyDataPomiaru = temperaturaWodyDataPomiaru;
     }
 
@@ -102,11 +116,11 @@ public class Hydro {
         this.zjawiskoLodowe = zjawiskoLodowe;
     }
 
-    public LocalDate getZjawiskoLodoweDataPomiaru() {
+    public LocalDateTime getZjawiskoLodoweDataPomiaru() {
         return zjawiskoLodoweDataPomiaru;
     }
 
-    public void setZjawiskoLodoweDataPomiaru(LocalDate zjawiskoLodoweDataPomiaru) {
+    public void setZjawiskoLodoweDataPomiaru(LocalDateTime zjawiskoLodoweDataPomiaru) {
         this.zjawiskoLodoweDataPomiaru = zjawiskoLodoweDataPomiaru;
     }
 
@@ -118,11 +132,11 @@ public class Hydro {
         this.zjawiskoZarastania = zjawiskoZarastania;
     }
 
-    public LocalDate getZjawiskoZarastaniaDataPomiaru() {
+    public LocalDateTime getZjawiskoZarastaniaDataPomiaru() {
         return zjawiskoZarastaniaDataPomiaru;
     }
 
-    public void setZjawiskoZarastaniaDataPomiaru(LocalDate zjawiskoZarastaniaDataPomiaru) {
+    public void setZjawiskoZarastaniaDataPomiaru(LocalDateTime zjawiskoZarastaniaDataPomiaru) {
         this.zjawiskoZarastaniaDataPomiaru = zjawiskoZarastaniaDataPomiaru;
     }
 
