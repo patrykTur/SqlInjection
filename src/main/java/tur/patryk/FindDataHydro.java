@@ -41,13 +41,13 @@ public class FindDataHydro {
         hydro.setRzeka(resultSet.getString("rzeka"));
         hydro.setWojewodztwo(resultSet.getString("województwo"));
         hydro.setStanWody(resultSet.getInt("stan_wody"));
-        hydro.setStanWodyDataPomiaru(DateConverter.sqlDate2LocalDateTime(resultSet.getDate("stan_wody_data_pomiaru")));
+        hydro.setStanWodyDataPomiaru(DateConverter.sqlDate2LocalDateTime(resultSet.getTimestamp("stan_wody_data_pomiaru")));
         hydro.setTemperaturaWody(resultSet.getDouble("temperatura_wody"));
-        hydro.setTemperaturaWodyDataPomiaru(DateConverter.sqlDate2LocalDateTime(resultSet.getDate("temperatura_wody_data_pomiaru")));
+        hydro.setTemperaturaWodyDataPomiaru(DateConverter.sqlDate2LocalDateTime(resultSet.getTimestamp("temperatura_wody_data_pomiaru")));
         hydro.setZjawiskoLodowe(resultSet.getInt("zjawisko_lodowe"));
-        hydro.setZjawiskoLodoweDataPomiaru(DateConverter.sqlDate2LocalDateTime(resultSet.getDate("zjawisko_lodowe_data_pomiaru")));
+        hydro.setZjawiskoLodoweDataPomiaru(DateConverter.sqlDate2LocalDateTime(resultSet.getTimestamp("zjawisko_lodowe_data_pomiaru")));
         hydro.setZjawiskoZarastania(resultSet.getInt("zjawisko_zarastania"));
-        hydro.setZjawiskoZarastaniaDataPomiaru(DateConverter.sqlDate2LocalDateTime(resultSet.getDate("zjawisko_zarastania_data_pomiaru")));
+        hydro.setZjawiskoZarastaniaDataPomiaru(DateConverter.sqlDate2LocalDateTime(resultSet.getTimestamp("zjawisko_zarastania_data_pomiaru")));
 
         return hydro;
     }
