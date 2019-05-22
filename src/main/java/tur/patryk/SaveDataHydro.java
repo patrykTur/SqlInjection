@@ -33,43 +33,6 @@ public class SaveDataHydro {
 
         PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> add original project files
-        preparedStatement.setInt(1, hydro.getIdStacji());
-        preparedStatement.setString(2, hydro.getStacja());
-        preparedStatement.setString(3, hydro.getRzeka());
-        preparedStatement.setString(4, hydro.getWojewodztwo());
-<<<<<<< HEAD
-        preparedStatement.setString(5, hydro.getStanWody());
-        preparedStatement.setString(6, hydro.getStanWodyDataPomiaru());
-        preparedStatement.setString(7, hydro.getTemperaturaWody());
-        preparedStatement.setString(8, hydro.getTemperaturaWodyDataPomiaru());
-        preparedStatement.setString(9, hydro.getZjawiskoLodowe());
-        preparedStatement.setString(10, hydro.getZjawiskoLodoweDataPomiaru());
-        preparedStatement.setString(11, hydro.getZjawiskoZarastania());
-        preparedStatement.setString(12, hydro.getZjawiskoZarastaniaDataPomiaru());
-=======
-//        preparedStatement.setInt(1, hydro.getIdStacji());
-//        preparedStatement.setString(2, hydro.getStacja());
-//        preparedStatement.setString(3, hydro.getRzeka());
-//        preparedStatement.setString(4, hydro.getWojewodztwo());
-//        preparedStatement.setInt(5, hydro.getStanWody());
-//        preparedStatement.setDate(6, DateConverter.localDateTime2SqlDate(hydro.getStanWodyDataPomiaru()));
-//        preparedStatement.setDouble(7, hydro.getTemperaturaWody());
-//        preparedStatement.setDate(8, DateConverter.localDateTime2SqlDate(hydro.getTemperaturaWodyDataPomiaru()));
-//        preparedStatement.setInt(9, hydro.getZjawiskoLodowe());
-//        preparedStatement.setDate(10, DateConverter.localDateTime2SqlDate(hydro.getZjawiskoLodoweDataPomiaru()));
-//        preparedStatement.setInt(11, hydro.getZjawiskoZarastania());
-//        preparedStatement.setDate(12, DateConverter.localDateTime2SqlDate(hydro.getZjawiskoZarastaniaDataPomiaru()));
-
-=======
->>>>>>> update
-=======
->>>>>>> feature_branch
         CheckNull.intOrNull(preparedStatement, 1, hydro.getIdStacji());
         CheckNull.stringOrNull(preparedStatement, 2, hydro.getStacja());
         CheckNull.stringOrNull(preparedStatement, 3, hydro.getRzeka());
@@ -82,21 +45,6 @@ public class SaveDataHydro {
         CheckNull.dateOrNull(preparedStatement, 10, hydro.getZjawiskoLodoweDataPomiaru());
         CheckNull.intOrNull(preparedStatement, 11, hydro.getZjawiskoZarastania());
         CheckNull.dateOrNull(preparedStatement, 12, hydro.getZjawiskoZarastaniaDataPomiaru());
-<<<<<<< HEAD
->>>>>>> Add DateConverter and CheckNull class
-=======
-        preparedStatement.setInt(5, hydro.getStanWody());
-        preparedStatement.setDate(6, hydro.getStanWodyDataPomiaru());
-        //preparedStatement.setDate(6, Date.valueOf(hydro.getStanWodyDataPomiaru()));
-        preparedStatement.setDouble(7, hydro.getTemperaturaWody());
-        preparedStatement.setDate(8, hydro.getTemperaturaWodyDataPomiaru());
-        preparedStatement.setInt(9, hydro.getZjawiskoLodowe());
-        preparedStatement.setDate(10, hydro.getZjawiskoLodoweDataPomiaru());
-        preparedStatement.setInt(11, hydro.getZjawiskoZarastania());
-        preparedStatement.setDate(12, hydro.getZjawiskoZarastaniaDataPomiaru());
->>>>>>> add original project files
-=======
->>>>>>> feature_branch
 
         preparedStatement.execute();
     }
