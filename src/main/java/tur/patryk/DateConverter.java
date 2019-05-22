@@ -1,6 +1,7 @@
 package tur.patryk;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 import java.time.*;
 
 public class DateConverter {
@@ -17,13 +18,12 @@ public class DateConverter {
         return new Date(instant.toEpochMilli());
     }
 
-    public static LocalDateTime sqlDate2LocalDateTime (Date sqlDate) {
+    public static LocalDateTime sqlDate2LocalDateTime(Timestamp sqlDate) {
 
         if (sqlDate == null) {
             return null;
         }
 
-        //return new LocalDateTime(sqlDate.getTime());
-        return LocalDateTime.ofInstant(sqlDate.toInstant(), ZoneId.systemDefault());
+        return sqlDate.toLocalDateTime();
     }
 }
