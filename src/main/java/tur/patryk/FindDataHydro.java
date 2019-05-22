@@ -51,12 +51,13 @@ public class FindDataHydro {
         hydro.setZjawiskoZarastaniaDataPomiaru(resultSet.getString("zjawisko_zarastania_data_pomiaru"));
 =======
         hydro.setStanWody(resultSet.getInt("stan_wody"));
-        hydro.setStanWodyDataPomiaru(resultSet.getDate("stan_wody_data_pomiaru"));
+        hydro.setStanWodyDataPomiaru(DateConverter.sqlDate2LocalDateTime(resultSet.getTimestamp("stan_wody_data_pomiaru")));
         hydro.setTemperaturaWody(resultSet.getDouble("temperatura_wody"));
-        hydro.setTemperaturaWodyDataPomiaru(resultSet.getDate("temperatura_wody_data_pomiaru"));
+        hydro.setTemperaturaWodyDataPomiaru(DateConverter.sqlDate2LocalDateTime(resultSet.getTimestamp("temperatura_wody_data_pomiaru")));
         hydro.setZjawiskoLodowe(resultSet.getInt("zjawisko_lodowe"));
-        hydro.setZjawiskoLodoweDataPomiaru(resultSet.getDate("zjawisko_lodowe_data_pomiaru"));
+        hydro.setZjawiskoLodoweDataPomiaru(DateConverter.sqlDate2LocalDateTime(resultSet.getTimestamp("zjawisko_lodowe_data_pomiaru")));
         hydro.setZjawiskoZarastania(resultSet.getInt("zjawisko_zarastania"));
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         hydro.setZjawiskoZarastaniaDataPomiaru(DateConverter.sqlDate2LocalDateTime(resultSet.getDate("zjawisko_zarastania_data_pomiaru")));
@@ -67,6 +68,9 @@ public class FindDataHydro {
 =======
         hydro.setZjawiskoZarastaniaDataPomiaru(resultSet.getString("zjawisko_zarastania_data_pomiaru"));
 >>>>>>> add original project files
+=======
+        hydro.setZjawiskoZarastaniaDataPomiaru(DateConverter.sqlDate2LocalDateTime(resultSet.getTimestamp("zjawisko_zarastania_data_pomiaru")));
+>>>>>>> feature_branch
 
         return hydro;
     }

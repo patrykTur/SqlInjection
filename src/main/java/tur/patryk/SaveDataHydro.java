@@ -25,14 +25,15 @@ public class SaveDataHydro {
         System.out.println("Done");
     }
 
-    private static void addToDataBase (Hydro hydro, Connection connection) throws SQLException {
+    private static void addToDataBase(Hydro hydro, Connection connection) throws SQLException {
 
         String sqlQuery = "insert into hydro (id_stacji, stacja, rzeka, województwo, stan_wody, stan_wody_data_pomiaru, " +
-        "temperatura_wody, temperatura_wody_data_pomiaru, zjawisko_lodowe, zjawisko_lodowe_data_pomiaru, " +
-        "zjawisko_zarastania, zjawisko_zarastania_data_pomiaru) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                "temperatura_wody, temperatura_wody_data_pomiaru, zjawisko_lodowe, zjawisko_lodowe_data_pomiaru, " +
+                "zjawisko_zarastania, zjawisko_zarastania_data_pomiaru) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,6 +68,8 @@ public class SaveDataHydro {
 
 =======
 >>>>>>> update
+=======
+>>>>>>> feature_branch
         CheckNull.intOrNull(preparedStatement, 1, hydro.getIdStacji());
         CheckNull.stringOrNull(preparedStatement, 2, hydro.getStacja());
         CheckNull.stringOrNull(preparedStatement, 3, hydro.getRzeka());
@@ -79,6 +82,7 @@ public class SaveDataHydro {
         CheckNull.dateOrNull(preparedStatement, 10, hydro.getZjawiskoLodoweDataPomiaru());
         CheckNull.intOrNull(preparedStatement, 11, hydro.getZjawiskoZarastania());
         CheckNull.dateOrNull(preparedStatement, 12, hydro.getZjawiskoZarastaniaDataPomiaru());
+<<<<<<< HEAD
 >>>>>>> Add DateConverter and CheckNull class
 =======
         preparedStatement.setInt(5, hydro.getStanWody());
@@ -91,6 +95,8 @@ public class SaveDataHydro {
         preparedStatement.setInt(11, hydro.getZjawiskoZarastania());
         preparedStatement.setDate(12, hydro.getZjawiskoZarastaniaDataPomiaru());
 >>>>>>> add original project files
+=======
+>>>>>>> feature_branch
 
         preparedStatement.execute();
     }
